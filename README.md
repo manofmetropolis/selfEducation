@@ -11,6 +11,9 @@ My plan is to follow the track of courses and camps that are available online, t
 ## 01 - JavaScript Fundamentals:
 
 * Review of data types and structures
+	* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 * JavaScript in the Command Line
+	* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Shells
+	* https://creative-coding.decontextualize.com/node/
 * Deep dive on Node
 * Functions! Loops! Scope!
