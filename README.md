@@ -10,7 +10,7 @@ My plan is to follow the track of courses and camps that are available online, t
 
 ## 01 - JavaScript Fundamentals:
 
-* Review of datat types and structures
+* Review of data types and structures
 * JavaScript in the Command Line
 * Deep dive on Node
 * Functions! Loops! Scope!
