@@ -51,7 +51,27 @@ ninetiesTitles.slice(1, 4);
 //SPLICE removes or replaces existing elements. THIS IS A DESTRUCTIVE METHOD.
 //array.splice(starting index, ?how many items to delete, ?what to put in)
 //If only one number is given, that's what's getting deleted, and nothing else happens.
+//splice isn't great for updating the middle of an array. And it's not that efficient for changing the end.
 const laterTitles = ['Glitter', 'Charmbracelet', 'Emancipation', 'Memoirs', 'I Am Me', 'Caution'];
 laterTitles.splice(1, 2, 'Infinity'); // delete charmbracelet and emancipation, and insert 'Infinity' where those were.
 
-//
+//SORT
+//Default is that it sorts in place, which means that it essentially will "alphabetize" numbers rather than actually putting them in numerical order. It converts everything into strings and compares their UTF unit code values. Look:
+let numbers = [6, 12, 200, 4.5];
+numbers.sort()
+//Returns: [12, 22, 4.5, 6]; Sort is better used for more complicated things.
+
+//EQUALITY REVIEW
+// 'Rob' === 'Rob' is true
+// But 'Rob' === 'rob' is false
+// Identical arrays are not considered 'equal.' It's complicated. However, distinct variables that refer to the same array are equal.
+let cousins = ['Devin', 'Rob', 'Paul', 'Lauren', 'Mark'];
+let themCousins = cousins; // cousins === themCousins returns true
+
+//CONST AND ARRAYS
+//Const with an array only cares that the "address" of the element remains unchanged. An array set with const can be changed. But when you try to reassign it, the expected occurs.
+
+//NESTED ARRAYS
+//Arrays that contain arrays.
+const gameBoard = [['X', 'O', 'X'], ['O', null, 'X'], ['O', 'O', 'X']];
+// gameBoard[1][1] returns 'null'
