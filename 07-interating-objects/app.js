@@ -18,6 +18,7 @@ const testScores = {
 let total = 0;
 let scores = Object.values(testScores)
 let average
+
 for (let score of scores) {
     total += score;
     average = total / scores.length;
