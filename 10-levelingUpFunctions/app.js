@@ -1,61 +1,46 @@
-//FUNCTIONS ARE A BIG DEAL. YOU KNOW THIS.
+//Level your functions up.
 
-let diceTypes = [6, 6];
-let results = [];
+//SCOPE is the location where a variable is defined, and that dictates where we have access to that variable. It's also a major source for errors.
 
-function rollDie() {
+//THIS WORKS:
+// function totalAlbums() {
+//     let albums = 39;
+//     console.log(albums);
+// }
 
-    for (let i = 0; i < diceTypes.length; i++) {
-        let sides = diceTypes[i];
-        let result = Math.floor(Math.random() * sides + 1);
+//THIS DOESN'T:
+// function princeRecords() {
+//     let records = 39;
+// }
+// console.log(records);
 
-        results.push(result);
+//Variables that are defined in the function are only accessible within the function.
+
+//BLOCK SCOPE
+let radius = 8;
+if (radius > 0) {
+    const PI = 4.14159;
+    let msg = 'Hellurr.';
+}
+
+console.log(radius);
+//This worked.
+
+// console.log(msg);
+//This didn't.
+//VSCode is cool because it will immediately alert you too an unreachable variable.
+
+//LEXCIAL SCOPE
+//If there is an outer function, and an inner function in that function...the inner function has access to the variables defined in the outer function.
+
+function picnic() {
+    const people = ['Mark', 'Jack', 'Mike', 'Cooper'];
+    const needs = ['plates', 'forks', 'burgers', 'potato salad'];
+
+    function bring() {
+        let person = people[Math.floor(Math.random() * people.length)];
+        let need = needs[Math.floor(Math.random() * needs.length)];
+        console.log(`I need ${person} to bring ${need}.`);
     }
-    console.log(results);
-}
-
-//STEP 1: Define the function — give it a name, tell JS it's a thing.  This does not run the function!
-
-//The "function" way:
-
-function robIsGreat() {
-    console.log("Rob is so great!");
-}
-
-//STEP 2: CALL THE FUNCTION
-
-//ARGUMENTS!!!
-//Arguments define the inputs of the function. They essentially act as variables that cause the function to turn out a different result based on them.
-
-function declareHusband(fullName) {
-    console.log(`I'm going to marry ${fullName}`);
-};
-
-//MULTIPLE ARGUMENTS
-//Tell the function to expect multiple parameters. Like first name and last name. Remember that everything is defined by order.
-
-function saySomething(firstName, lastName) {
-    console.log(`Hey, how you doin', ${firstName} ${lastName[0]}.?`)
-}
-
-var textBox = document.querySelector(".textBox");
-
-function repeat(str, num) {
-    var result = '';
-
-    for (let i = 0; i < num; i++) {
-        result += str;
-    }
-    textBox.innerText = result;
-}
-
-//RETURNS FINALLY!
-//Return outputs the result of a function and STOPS the function.
-
-function isShortsWeather(temp) {
-    if (temp >= 75) {
-        return true;
-    } else {
-        return false;
-    }
+    bring();
 }
