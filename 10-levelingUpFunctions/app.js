@@ -28,7 +28,7 @@ console.log(radius);
 
 // console.log(msg);
 //This didn't.
-//VSCode is cool because it will immediately alert you too an unreachable variable.
+//VSCode is cool because it will immediately alert you to an unreachable variable.
 
 //LEXCIAL SCOPE
 //If there is an outer function, and an inner function in that function...the inner function has access to the variables defined in the outer function.
@@ -44,3 +44,13 @@ function picnic() {
     }
     bring();
 }
+
+//FUNCTION EXPRESSIONS: A conceptually different way of defining a function by storing a function in a variable.
+
+const add = function (x, y) {
+    return x + y;
+}
+
+add(3, 4)
+
+//It's essentially storing an anono function in a variable. This demonstrates that functions are values in javascript. This facilitates passing functions as arguments, which will come up going forward.
